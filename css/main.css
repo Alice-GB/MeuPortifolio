@@ -1,0 +1,84 @@
+/*Main Content*/
+main{
+    padding: 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main .main-content{
+    display: flex;
+    flex-direction: column;
+}
+
+main .main-content h2{
+
+    font-size: 2.1em;
+    margin-bottom: 2%;
+
+}
+main .main-content .text{
+    margin-bottom: 10%;
+
+}
+
+main .main-content .text p{
+    width: 75%;
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.6;
+ 
+}
+/*CARDS*/
+main .techs .cards-container{
+    display: flex;
+    align-items: center;
+}
+
+main .techs .cards-container .card{
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 8px;
+    margin-right: 0.9em;
+    margin-left: 0.9em;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: box-shadow 0.25s ease-in-out;
+}
+
+main .techs .cards-container .card img{
+    width: 80px;
+}
+
+main .techs .cards-container .card:hover{
+    box-shadow: 0 0 20px rgb(218, 41, 215); 
+}
+
+/*Figure */
+
+main figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main figure img{
+  width: 400px;
+  height: 400px;
+  border-radius: 200px;
+
+  margin-bottom: 6%;
+  border: 1px  rgb(218, 41, 215) solid;
+  transition: 0.2s ease-in-out;
+}
+
+main figure img:hover{
+    box-shadow: 0 0 12px rgb(218, 41, 215);
+}   
