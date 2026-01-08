@@ -28,6 +28,25 @@
     }
 }
 
+@media (max-width: 900px) {
+    .layout-container {
+        flex-direction: column; /* Vira uma coluna só */
+        height: auto;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .main-content {
+        overflow-y: visible;
+        padding: 20px;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr; /* Uma coluna de projetos */
+    }
+}
+
 @media(max-width: 700px){
     header{
         flex-direction: column;
@@ -63,3 +82,4 @@
         height: 250px;
     }
 }
+
