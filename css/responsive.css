@@ -29,57 +29,47 @@
 }
 
 @media (max-width: 900px) {
+
+    /* 1. Destrava a rolagem da página */
+    body {
+        overflow: auto; /* Permite rolar a tela normalmente */
+        height: auto;   /* A altura se ajusta ao conteúdo */
+    }
+
+    /* 2. Empilha: Barra lateral em cima, conteúdo embaixo */
     .layout-container {
-        flex-direction: column; /* Vira uma coluna só */
-        height: auto;
+        flex-direction: column; /* Muda de lado-a-lado para coluna */
+        height: auto;           /* Remove a altura fixa da tela */
     }
+
+    /* 3. Ajusta a Barra Lateral para celular */
     .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
+        width: 100%;        /* Ocupa a largura toda */
+        height: auto;       /* Altura automática */
+        position: relative; /* Deixa de ser fixa */
+        padding: 30px 15px; /* Menos espaço interno */
+        
+        /* Opcional: Uma cor levemente diferente para separar */
+        border-bottom: 2px solid rgb(218, 41, 215); 
     }
+
+    /* Diminui a foto para não ocupar a tela toda do celular */
+    .sidebar .avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* 4. Ajusta o Conteúdo Principal */
     .main-content {
-        overflow-y: visible;
-        padding: 20px;
+        width: 100%;
+        height: auto;       /* Deixa crescer conforme o conteúdo */
+        overflow: visible;  /* Quem rola agora é o corpo do site, não a div */
+        padding: 20px;      /* Menos borda lateral */
+        padding-bottom: 80px; /* Espaço extra para o rodapé não cobrir o texto */
     }
+
+    /* 5. Ajusta os Projetos para uma coluna só */
     .projects-grid {
-        grid-template-columns: 1fr; /* Uma coluna de projetos */
+        grid-template-columns: 1fr; /* 1 Coluna ao invés de 2 */
     }
 }
-
-@media(max-width: 700px){
-    header{
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        text-align: center;
-    }
-
-    header h1{
-        margin-bottom: 2em;
-    }
-
-    header nav{
-        margin-top: 24em;
-    }
-
-    header nav a{
-        font-size: 1em;
-    }
-
-    main .techs .cards-container .card{
-        width: 60px;
-        height: 60px;
-    }
-
-    main .main-content .text h2, .main-content .text h2{
-        font-size: 1.8em;
-    }
-
-    main figure img{
-        width: 250px;
-        height: 250px;
-    }
-}
-
