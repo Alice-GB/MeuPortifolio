@@ -28,48 +28,57 @@
     }
 }
 
+/* =========================================
+   VERSÃO MOBILE (CELULAR) - FINAL DO ARQUIVO
+   ========================================= */
 @media (max-width: 900px) {
 
-    /* 1. Destrava a rolagem da página */
-    body {
-        overflow: auto; /* Permite rolar a tela normalmente */
-        height: auto;   /* A altura se ajusta ao conteúdo */
+    /* 1. DESTRAVAR A ROLAGEM (Obrigatório) */
+    html, body {
+        overflow-y: auto !important; /* Força a barra de rolagem aparecer */
+        height: auto !important;     /* Permite o site crescer */
+        min-height: 100vh;          
     }
 
-    /* 2. Empilha: Barra lateral em cima, conteúdo embaixo */
+    /* 2. LAYOUT EM COLUNA */
     .layout-container {
-        flex-direction: column; /* Muda de lado-a-lado para coluna */
-        height: auto;           /* Remove a altura fixa da tela */
+        flex-direction: column;
+        height: auto !important;
+        overflow: visible !important;
     }
 
-    /* 3. Ajusta a Barra Lateral para celular */
+    /* 3. BARRA LATERAL */
     .sidebar {
-        width: 100%;        /* Ocupa a largura toda */
-        height: auto;       /* Altura automática */
-        position: relative; /* Deixa de ser fixa */
-        padding: 30px 15px; /* Menos espaço interno */
-        
-        /* Opcional: Uma cor levemente diferente para separar */
-        border-bottom: 2px solid rgb(218, 41, 215); 
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 20px;
+        overflow: visible; 
     }
 
-    /* Diminui a foto para não ocupar a tela toda do celular */
+    /* --- TRUQUE DE MESTRE: ESCONDER TEXTO LONGO NO MOBILE --- */
+
+    .sidebar .about-me {
+        display: none; 
+    }
+
     .sidebar .avatar {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
+        margin-bottom: 10px;
     }
 
-    /* 4. Ajusta o Conteúdo Principal */
+    /* 4. CONTEÚDO PRINCIPAL */
     .main-content {
         width: 100%;
-        height: auto;       /* Deixa crescer conforme o conteúdo */
-        overflow: visible;  /* Quem rola agora é o corpo do site, não a div */
-        padding: 20px;      /* Menos borda lateral */
-        padding-bottom: 80px; /* Espaço extra para o rodapé não cobrir o texto */
+        height: auto;
+        overflow: visible;
+        padding: 20px;
+        padding-bottom: 80px; 
     }
 
-    /* 5. Ajusta os Projetos para uma coluna só */
+ 
     .projects-grid {
-        grid-template-columns: 1fr; /* 1 Coluna ao invés de 2 */
+        grid-template-columns: 1fr;
     }
 }
