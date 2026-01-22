@@ -46,6 +46,8 @@
 }
 .social-links a:hover { color: rgb(218, 41, 215); }
 
+.social-links h1 {font-size: 1.2em; margin-bottom: 10px; font-weight: 700; color: rgb(218, 41, 215);}
+
 .about-me { margin-top: 30px; text-align: left; }
-.about-me h3 { color: rgb(218, 41, 215); margin-bottom: 10px; font-size: 1.2em;}
+.about-me h3 { color: rgb(218, 41, 215); margin-bottom: 10px; font-size: 1.2em; text-align: center;}
 .about-me p { font-size: 0.9em; line-height: 1.6; color: #ddd; }
